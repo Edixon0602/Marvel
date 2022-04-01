@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#characters-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#characters-grid > article {
+    min-width: 0;
+    min-height: 0;
+}
+#characters-grid > article > img {
+    display: block;
+    max-width: 100%;
+}
