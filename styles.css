@@ -15,7 +15,15 @@ body {
     max-width: 1280px;
     margin: 0 auto;
 }
-
+.grid {
+    display: grid;
+}
+.g4-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 20px auto;
+}
 /* Header */
 #header {
     background-color: var(--orange);
@@ -39,12 +47,6 @@ body {
 }
 /* !Header */
 
-#characters-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    margin: 20px auto;
-}
 .list-item {
     box-shadow: 1px 1px 3px var(--light-gray);
     min-width: 0;

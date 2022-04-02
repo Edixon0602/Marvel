@@ -10,7 +10,7 @@ export default function buildList(list, container) {
 		content.classList.add('meta-content');
 		thumbnail.src = `${el.thumbnail.path}.${el.thumbnail.extension}`;
 		name.classList.add('name');
-		name.innerText = el.name;
+		name.innerText = el.name || el.title;
 		card.appendChild(thumbnail);
 		content.appendChild(name);
 		card.appendChild(content);
