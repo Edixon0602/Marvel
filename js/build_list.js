@@ -4,13 +4,17 @@ export default function buildList(list, container) {
 	list.forEach(el => {
 		let card = document.createElement('article');
 		let thumbnail = document.createElement('img');
-		let name = document.createElement('span');
+		let content = document.createElement('div');
+		let name = document.createElement('h4');
+		card.classList.add('list-item');
+		content.classList.add('meta-content');
 		thumbnail.src = `${el.thumbnail.path}.${el.thumbnail.extension}`;
+		name.classList.add('name');
 		name.innerText = el.name;
 		card.appendChild(thumbnail);
-		card.appendChild(name);
+		content.appendChild(name);
+		card.appendChild(content);
 		fragment.appendChild(card);
-		console.log(el);
 	});
 	targetContainer.appendChild(fragment);
 }
