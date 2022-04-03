@@ -11,6 +11,10 @@ export default function fetchPagination(source) {
       fetchUrl = 'https://gateway.marvel.com:443/v1/public/comics';
       container = '#comics-grid';
     break;
+    case 'http://127.0.0.1:5500/assets/series.html':
+      fetchUrl = 'https://gateway.marvel.com:443/v1/public/series';
+      container = '#series-grid';
+    break;
   }
   let offset = window.paginationCounter * 20;
   fetch(`${fetchUrl}?apikey=${pubKey}&offset=${offset}`)
