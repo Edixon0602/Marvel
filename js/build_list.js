@@ -1,6 +1,9 @@
-export default function buildList(list, container) {
-	let targetContainer = document.querySelector(container);
+export default function buildList(list, container, filter) {
+  let targetContainer = document.querySelector(container);
 	let fragment = document.createDocumentFragment();
+  if (filter) {
+    targetContainer.innerHTML = '';
+  }
 	list.forEach(el => {
 		let card = document.createElement('article');
 		let thumbnail = document.createElement('img');
