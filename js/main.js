@@ -1,7 +1,5 @@
-import fetchCharacters from "./list_characters.js";
 import setMainContent from "./manage_views.js";
-import fetchComics from "./list_comics.js";
-import fetchSeries from "./list_series.js";
+import listFetch from "./list_fetch.js";
 window.pubKey = '0198140dc9c6b9538882957af716ccd7';
 window.paginationCounter = 1;
 window.addEventListener('load', () => {
@@ -15,11 +13,11 @@ window.addEventListener('load', () => {
       window.paginationCounter = 1;
       setMainContent(mainContent, el.href);
       if (el.innerText === 'Personajes') {
-        fetchCharacters();
+        listFetch('https://gateway.marvel.com:443/v1/public/characters', '#characters-grid');
       } else if (el.innerText === 'Comics') {
-        fetchComics();
+        listFetch('https://gateway.marvel.com:443/v1/public/comics', '#comics-grid');
       } else if (el.innerText === 'Series') {
-        fetchSeries();
+        listFetch('https://gateway.marvel.com:443/v1/public/series', '#series-grid');
       }
     })
   })
