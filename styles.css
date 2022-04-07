@@ -62,6 +62,7 @@ body {
 
 /* Listados */
 .list-item {
+  cursor: pointer;
   box-shadow: 1px 1px 3px var(--light-gray);
   min-width: 0;
   min-height: 0;

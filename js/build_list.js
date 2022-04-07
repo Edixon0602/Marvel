@@ -10,6 +10,7 @@ export default function buildList(list, container, filter) {
 		let content = document.createElement('div');
 		let name = document.createElement('h4');
 		card.classList.add('list-item');
+    card.dataset.id = el.id;
 		content.classList.add('meta-content');
 		thumbnail.src = `${el.thumbnail.path}.${el.thumbnail.extension}`;
 		name.classList.add('name');
