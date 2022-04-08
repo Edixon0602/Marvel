@@ -1,3 +1,5 @@
+import singleFetch from "./single_fetch.js";
+
 export default function buildList(list, container, filter) {
   let targetContainer = document.querySelector(container);
 	let fragment = document.createDocumentFragment();
@@ -9,6 +11,7 @@ export default function buildList(list, container, filter) {
 		let thumbnail = document.createElement('img');
 		let content = document.createElement('div');
 		let name = document.createElement('h4');
+    card.addEventListener('click', singleFetch);
 		card.classList.add('list-item');
     card.dataset.id = el.id;
 		content.classList.add('meta-content');

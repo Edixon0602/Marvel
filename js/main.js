@@ -1,11 +1,12 @@
 import setMainContent from "./manage_views.js";
 import listFetch from "./list_fetch.js";
+import singleFetch from "./single_fetch.js";
+
 window.pubKey = '0198140dc9c6b9538882957af716ccd7';
 window.paginationCounter = 1;
 window.addEventListener('load', () => {
   let mainContent = document.getElementById('content');
   let navItems = document.querySelectorAll('.menu > a');
-
   // Set event listeners
   navItems.forEach(el => {
     el.addEventListener('click', (e) => {
@@ -21,6 +22,5 @@ window.addEventListener('load', () => {
       }
     })
   })
-
   setMainContent(mainContent);
 })
